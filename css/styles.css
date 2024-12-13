@@ -1,5 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
 }
 
 ul,
@@ -75,6 +76,13 @@ img {
   color: #fd9222;
 }
 
+.paragraph-text {
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: #111;
+}
+
 /* TODO----- HEADER ----- */
 
 .header {
@@ -124,6 +132,16 @@ img {
   gap: 18px;
 }
 
+.header-soc-icon {
+  transition: stroke 300ms ease, fill 300ms ease;
+}
+
+.header-soc-icon:hover,
+.header-soc-icon:focus {
+  stroke: #fd9222;
+  fill: #fd9222;
+}
+
 /* ----- ----- */
 
 /* TODO----- HERO ----- */
@@ -133,6 +151,15 @@ img {
 }
 
 .hero-container {
+  background-image: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0.4) 0%,
+      rgba(17, 17, 17, 0.4) 100%
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: gray;
   padding: 360px 40px 40px;
   border-radius: 30px;
@@ -162,16 +189,18 @@ img {
   padding: 14px 40px;
   /* width: 144px;
   height: 45px; */
-  background: #fd9222;
+  background-color: #fd9222;
   border: none;
 
   margin-right: 14px;
+
+  transition: color 300ms ease, background-color 300ms ease;
 }
 
 .hero-primary-btn:hover,
 .hero-primary-btn:focus {
   color: #fd9222;
-  background: #fcf1e0;
+  background-color: #fcf1e0;
 }
 
 .hero-secondary-btn {
@@ -182,6 +211,8 @@ img {
   border: 1px solid #fff;
   border-radius: 100px;
   padding: 14px 40px;
+
+  transition: color 300ms ease, border 300ms ease;
 }
 
 .hero-secondary-btn:hover,
@@ -198,6 +229,8 @@ img {
   color: #fff;
 
   margin-left: auto;
+
+  transition: color 300ms ease;
 }
 
 .hero-scroll-btn:hover,
@@ -258,11 +291,7 @@ img {
 }
 
 .taste-text {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
   text-align: center;
-  color: #111;
   max-width: 486px;
   margin: 0 auto;
   margin-bottom: 50px;
@@ -278,6 +307,28 @@ img {
   border-radius: 15px;
   padding: 28px;
   width: calc((100% - 3 * 19px) / 4);
+
+  background-color: #fff;
+
+  /* width: 270px;
+  height: 270px; */
+
+  position: relative;
+  overflow: hidden;
+}
+
+.taste-item:hover .taste-card {
+  transform: translateY(0);
+}
+
+.taste-item-choko {
+  background-color: #fd9222;
+  border: none;
+}
+
+.taste-item-nuts {
+  background-color: #1e1823;
+  border: none;
 }
 
 .taste-img {
@@ -291,6 +342,83 @@ img {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #111;
+}
+
+.taste-img-title-accent {
+  color: #fff;
+}
+
+.taste-card {
+  border-radius: 15px;
+  border: 1px solid transparent;
+  /* width: 270px;
+  height: 270px; */
+  background-color: #fff;
+  padding: 20px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+}
+
+.taste-card-title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.card-btns {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.taste-card-btn {
+  border-radius: 35px;
+  padding: 6px 16px;
+  background-color: #fd9222;
+  border: none;
+
+  font-size: 10px;
+  line-height: 1.2;
+  color: #fff;
+
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.taste-card-btn:hover,
+.taste-card-btn:focus {
+  color: #fd9222;
+  background-color: #fcf1e0;
+}
+
+.taste-benefits-btn {
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+  padding: 6px 16px;
+  background-color: #fafafa;
+
+  font-size: 10px;
+  line-height: 1.2;
+  color: #111;
+
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.taste-benefits-btn:hover,
+.taste-benefits-btn:focus {
+  color: #fff;
+  background-color: #fd9222;
+}
+
+.taste-card-text {
 }
 
 /* ----- ----- */
@@ -338,10 +466,6 @@ img {
 }
 
 .made-list-text {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
-  color: #111;
 }
 
 /* ----- ----- */
@@ -388,9 +512,6 @@ img {
 }
 
 .review-list-text {
-  font-size: 14px;
-  line-height: 1.29;
-  letter-spacing: -0.02em;
   text-align: center;
   color: rgba(17, 17, 17, 0.7);
 }
@@ -407,12 +528,14 @@ img {
   border: 1px solid #fd9222;
   border-radius: 100px;
   padding: 14px 40px;
+
+  transition: color 300ms ease, background-color 300ms ease;
 }
 
 .review-btn:hover,
 .review-btn:focus {
   color: #fff;
-  background: #fd9222;
+  background-color: #fd9222;
 }
 
 /* ----- ----- */
@@ -500,6 +623,8 @@ img {
   border: none;
   padding: 17px 40px;
   background-color: #fd9222;
+
+  transition: color 300ms ease, background-color 300ms ease;
 }
 
 .footer-btn:hover,
