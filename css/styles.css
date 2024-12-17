@@ -634,3 +634,61 @@ img {
 }
 
 /* ----- ----- */
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(30, 24, 35, 0.55);
+}
+
+.modal {
+  border-radius: 15px;
+  width: 517px;
+  height: 794px;
+  background-color: #fafafa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.modal-btn-icon {
+  stroke: #111;
+}
+
+.modal-title {
+  text-align: left;
+  max-width: 298px;
+  margin-bottom: 40px;
+}
+
+.modal-input {
+  width: 100%;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 13px;
+  height: 68px;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: transparent;
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #111;
+
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+}
