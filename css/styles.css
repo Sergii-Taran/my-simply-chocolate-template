@@ -728,3 +728,29 @@ img {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.modal-text-area {
+  width: 100%;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
+  border-radius: 13px;
+  padding: 22px 24px;
+  height: 137px;
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+
+  font-size: 18px;
+  color: #111;
+
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+}
+
+.modal-text-area:focus {
+  border-color: #fd9222;
+}
+
+.modal-text-area::placeholder {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.3);
+}
