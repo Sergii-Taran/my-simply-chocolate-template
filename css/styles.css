@@ -754,3 +754,42 @@ img {
   letter-spacing: -0.02em;
   color: rgba(64, 64, 64, 0.3);
 }
+
+.modal-check-label {
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.modal-check-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(17, 17, 17, 0.14);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.modal-check:checked + .modal-check-label span {
+  background-color: #fd9222;
+  border: none;
+}
+
+.check-icon {
+  fill: #fff;
+}
+
+.modal-link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #fd9222;
+}
