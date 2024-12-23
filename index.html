@@ -89,7 +89,15 @@
           <div class="hero-buttons">
             <button class="hero-primary-btn" type="button">Buy now</button>
             <a class="hero-secondary-btn" href="#made">How it's made</a>
-            <a class="hero-scroll-btn" href="">scroll down</a>
+            <a class="hero-scroll-btn" href=""
+              ><span>scroll down</span>
+              <span>
+                <div class="scroll-btn">
+                  <svg class="scroll-icon" width="14" height="8">
+                    <use href="./images/icons.svg#icon-scroll-down"></use>
+                  </svg>
+                </div> </span
+            ></a>
           </div>
         </div>
       </section>
@@ -98,6 +106,11 @@
           <h2 class="visually-hidden">Features</h2>
           <ul class="features-list">
             <li class="features-item">
+              <div class="features-icon-container">
+                <svg class="features-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-taste"></use>
+                </svg>
+              </div>
               <h3 class="features-subtitle">Unsurpassed taste</h3>
               <p class="features-item-text">
                 Crafted with the finest quality cocoa beans and a dedication to
@@ -107,6 +120,11 @@
               </p>
             </li>
             <li class="features-item">
+              <div class="features-icon-container">
+                <svg class="features-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-price"></use>
+                </svg>
+              </div>
               <h3 class="features-subtitle">Affordable price</h3>
               <p class="features-item-text">
                 Indulge in high-quality chocolate without breaking the bank with
@@ -117,6 +135,11 @@
               </p>
             </li>
             <li class="features-item">
+              <div class="features-icon-container">
+                <svg class="features-item-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-prod"></use>
+                </svg>
+              </div>
               <h3 class="features-subtitle">Own production</h3>
               <p class="features-item-text">
                 We take pride in our own production process, ensuring that every
@@ -367,7 +390,7 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <div class="footer-first-subcontainer">
+        <div class="footer-top">
           <p class="footer-title">
             <span class="title-accent">Chocolate</span> a delicious cure for a
             bad day
@@ -392,7 +415,7 @@
             </address>
           </div>
         </div>
-        <div class="footer-second-subcontainer">
+        <div class="footer-bottom">
           <nav class="footer-navigation">
             <ul class="footer-menu-list menu-list">
               <li class="footer-menu-item menu-item">
@@ -408,7 +431,17 @@
               </li>
             </ul>
           </nav>
-          <button class="footer-btn" type="submit">Subscribe</button>
+          <form class="footer-form">
+            <label for="footer-email" aria-label="footer input"></label>
+            <input
+              class="footer-input"
+              type="email"
+              name="footer-email"
+              id="footer-email"
+              placeholder="Enter your email"
+            />
+            <button class="footer-btn" type="submit">Subscribe</button>
+          </form>
         </div>
       </div>
     </footer>
@@ -493,7 +526,7 @@
               <a class="modal-link" href="">Privacy Policy</a></label
             >
           </div>
-          <button type="submit"></button>
+          <button class="modal-submit-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
